@@ -6,7 +6,7 @@ module.exports = {
   mode: "production",
   entry: "./src/app.js", //默认配置：./src/index.js
   output: {
-    path: __dirname + "/build", //默认配置：/dist
+    path: __dirname + "/dist", //默认配置：/dist
     filename: "[name].bundle.js",
     chunkFilename: "[name].[chunkhash:5].js"
   },
