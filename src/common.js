@@ -1,7 +1,10 @@
-import React, { Component } from "react";
-
-export default class common extends Component {
-  render() {
-    return <div>这是公共</div>;
-  }
-}
+export const flatten = (arr) => {
+  console.log("my-flatten");
+  return arr.reduce((all, cur) => {
+    if (Array.isArray(cur)) {
+      return [...all, ...flatten(cur)];
+    } else {
+      return [...all, cur];
+    }
+  }, []);
+};
